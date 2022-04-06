@@ -6,8 +6,6 @@ import '../App.css';
 const Home = () => {
   return (
     <div className="App">
-      {' '}
-      CHL
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
