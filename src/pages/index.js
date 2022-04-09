@@ -4,6 +4,21 @@ import logo from '../logo.svg';
 import '../App.css';
 
 const Home = () => {
+  const products = [
+    {
+      id: 1,
+      name: 'Product 1',
+    },
+    {
+      id: 2,
+      name: 'Product 2',
+    },
+    {
+      id: 3,
+      name: 'Product 3',
+    },
+  ];
+
   return (
     <div className="App">
       <header className="App-header">
@@ -19,6 +34,15 @@ const Home = () => {
         >
           Learn React
         </a>
+        <div>
+          <div>
+            {products.map((product) => (
+              <div>
+                <Link to={`/product/${product.id}`}>{product.name}</Link>
+              </div>
+            ))}
+          </div>
+        </div>
         <Link to="/about">
           <h1>About</h1>
         </Link>
